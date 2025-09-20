@@ -37,3 +37,5 @@ body:
     attributes:
       label: Screenshots / Error Logs
       description: Paste logs or screenshots if available.
+    validations:
+      required: true

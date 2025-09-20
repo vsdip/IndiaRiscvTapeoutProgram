@@ -16,16 +16,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const issueNumber = context.issue.number;
-            const message = `
-👋 Thanks for opening an issue!
-
-📌 Please make sure you:
-- Selected the correct **week** label
-- Provided clear details & steps tried
-- Checked **closed issues** to see if your problem was already solved
-
-Our support team will respond soon 🚀
-`;
+            const message = `👋 Thanks for opening an issue! \n \n 📌 Please make sure you: \n - Selected the correct **week** label\n - Provided clear details & steps tried\n - Checked **closed issues** to see if your problem was already solved\n \nOur support team will respond soon 🚀`;
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
