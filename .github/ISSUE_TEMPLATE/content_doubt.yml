@@ -1,0 +1,26 @@
+name: "📖 Content Doubt"
+description: Ask a question related to workshop content
+title: "[DOUBT] "
+labels: ["question"]
+body:
+  - type: dropdown
+    id: week
+    attributes:
+      label: Week
+      options:
+        - week-0
+        - week-1
+        - week-2
+        - week-3
+        - week-4
+        - week-5
+        - week-6
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      placeholder: "Write your doubt here..."
+    validations:
+      required: true

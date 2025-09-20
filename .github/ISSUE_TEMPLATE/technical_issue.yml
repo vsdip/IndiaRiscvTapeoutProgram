@@ -1,0 +1,39 @@
+name: "🐞 Technical Issue"
+description: Report a technical problem (errors, bugs, setup issues)
+title: "[TECH] "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: week
+    attributes:
+      label: Week
+      description: Which week are you facing this issue in?
+      options:
+        - week-0
+        - week-1
+        - week-2
+        - week-3
+        - week-4
+        - week-5
+        - week-6
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Explain the issue clearly.
+      placeholder: "What happened?"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps Tried
+      description: List what you already tried to solve the issue.
+      placeholder: "1. Tried restarting… 2. Reinstalled package…"
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshots / Error Logs
+      description: Paste logs or screenshots if available.

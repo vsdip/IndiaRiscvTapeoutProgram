@@ -1,0 +1,34 @@
+name: Auto Comment on New Issues
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Add welcome comment
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issueNumber = context.issue.number;
+            const message = `
+👋 Thanks for opening an issue!
+
+📌 Please make sure you:
+- Selected the correct **week** label
+- Provided clear details & steps tried
+- Checked **closed issues** to see if your problem was already solved
+
+Our support team will respond soon 🚀
+`;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              body: message
+            });

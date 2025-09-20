@@ -1,0 +1,26 @@
+name: "📝 Other"
+description: Any issue that doesn’t fit in the above categories
+title: "[OTHER] "
+labels: ["other"]
+body:
+  - type: dropdown
+    id: week
+    attributes:
+      label: Week
+      options:
+        - week-0
+        - week-1
+        - week-2
+        - week-3
+        - week-4
+        - week-5
+        - week-6
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe Your Issue
+      placeholder: "Explain clearly..."
+    validations:
+      required: true

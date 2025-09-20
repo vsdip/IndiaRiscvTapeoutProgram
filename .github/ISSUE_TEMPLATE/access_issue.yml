@@ -1,0 +1,27 @@
+name: "🔑 Access Issue"
+description: Report login/registration or access-related problems
+title: "[ACCESS] "
+labels: ["access issue"]
+body:
+  - type: dropdown
+    id: week
+    attributes:
+      label: Week
+      options:
+        - week-0
+        - week-1
+        - week-2
+        - week-3
+        - week-4
+        - week-5
+        - week-6
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Explain the problem you’re facing.
+      placeholder: "Example: Unable to log in with my account..."
+    validations:
+      required: true
