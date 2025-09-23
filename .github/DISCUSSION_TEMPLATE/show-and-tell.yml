@@ -1,0 +1,59 @@
+title: "[Show & Tell] <Your Project Title Here>"
+labels: ["show-and-tell"]
+body:
+  - type: input
+    id: week
+    attributes:
+      label: 📅 Week / Module
+      description: Which week/module does this post relate to?
+      placeholder: "Week-0, Week-1, Week-2..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-you-did
+    attributes:
+      label: 🛠 What You Worked On
+      description: Briefly describe your idea, work, or progress.
+      placeholder: "E.g., Set up RISC-V toolchain, tested 'Hello World' program..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 🖼 Screenshots / Code / Diagrams
+      description: Add visuals, code snippets, or links to GitHub repos.
+      placeholder: "Drag & drop images here or paste links..."
+
+  - type: textarea
+    id: links
+    attributes:
+      label: 🔗 External Links
+      description: Share your LinkedIn posts, blog articles, GitHub repos, YouTube demos, etc.
+      placeholder: |
+        - LinkedIn: https://www.linkedin.com/posts/example
+        - GitHub: https://github.com/username/project
+        - YouTube: https://youtu.be/example
+        - Blog: https://medium.com/@username/example
+
+  - type: textarea
+    id: challenges
+    attributes:
+      label: 🚧 Challenges Faced
+      description: List any blockers or issues you faced.
+      placeholder: "E.g., Installation issues, toolchain errors..."
+
+  - type: textarea
+    id: learnings
+    attributes:
+      label: 📖 Key Learnings
+      description: What did you learn while working on this?
+      placeholder: "E.g., Learned how RISC-V handles assembly-level programs..."
+
+  - type: textarea
+    id: next-steps
+    attributes:
+      label: 🔮 Next Steps
+      description: What do you plan to do next?
+      placeholder: "E.g., Explore simulation tools, move to Week-2 exercises..."
